@@ -3,6 +3,12 @@
 # please create a feature where the task is deleted once new task sets are being inputted with the permission of the user but before that previous task list should be displayed. Or have a option to delete some existing task and append some more if needed
 # dCity and tasks shouldn't collide
 
+# Check if curl and jq are installed
+if ! command -v curl &> /dev/null || ! command -v jq &> /dev/null; then
+    echo "Error: curl and jq are required but not installed."
+    exit 1
+fi
+
 # Initialising variables
 name=$(whoami)
 ip=$(curl -s https://ipinfo.io/ip)
