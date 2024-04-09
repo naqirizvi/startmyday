@@ -227,5 +227,3 @@ flow() {
         wish
     fi
 }
-
-flow
